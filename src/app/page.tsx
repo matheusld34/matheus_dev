@@ -1,6 +1,8 @@
 import Image from "next/image";
+import { Zap, Heart, Shield } from "lucide-react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { FeatureCard } from "@/components/FeatureCard";
 
 
 
@@ -43,6 +45,25 @@ export default function Home() {
                 Visite as minhas redes sociais, e deixe um comentário
               </p>
 
+            </div>
+
+            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+              <FeatureCard
+                icon={<Zap className="h-8 w-8 text-amber-600" />}
+                title="Rápido e simples"
+                description="Configure sua página em minutos e comece a receber doações imediatamente."
+              />
+              <FeatureCard
+                icon={<Heart className="h-8 w-8 text-amber-600" />}
+                title="Conexão direta"
+                description="Crie uma conexão mais próxima com seus apoiadores através de mensagens personalizadas."
+              />
+
+              <FeatureCard
+                icon={<Shield className="h-8 w-8 text-amber-600" />}
+                title="Pagamentos seguros"
+                description="Transações protegidas e transferências automáticas para sua conta bancária."
+              />
             </div>
           </div>
         </div>
